@@ -395,8 +395,13 @@ sudo dnf groupinstall "Development Tools" -y
 sudo dnf install git -y
 
 # VS Code installieren
+# 1. Microsoft GPG Key importieren
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+
+# 2. VS Code Repository hinzufügen
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+
+# 3. VS Code installieren
 sudo dnf install code -y
 
 # Docker installieren
@@ -462,7 +467,7 @@ sudo firewall-cmd --state
 ### Problem: Mac startet nicht richtig nach der Installation
 
 **Lösung:**
-1. Power-Button 10 Sekunden gedrückt halten um Mac auszuschalten
+1. Power-Button 10 Sekunden gedrückt halten, um Mac auszuschalten
 2. Wieder einschalten und Power-Button gedrückt halten
 3. Startoptionen werden angezeigt
 4. macOS auswählen und starten
@@ -604,7 +609,7 @@ Bei Fragen oder Problemen, besuchen Sie die [Asahi Linux Community](https://asah
 
 ## 📝 Lizenz
 
-Dieser Guide ist unter der MIT-Lizenz veröffentlicht. Fühlen Sie sich frei, ihn zu teilen und zu verbessern!
+Diese Anleitung ist unter der MIT-Lizenz veröffentlicht. Fühlen Sie sich frei, sie zu teilen und zu verbessern!
 
 ## 🤝 Beiträge
 
